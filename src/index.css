@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* Tema oscuro: se activa con la clase "dark" en <html> (ver src/theme.ts). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Sora', 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --color-bg: #f7f9fd;
+  --color-surface: #ffffff;
+  --color-surface-2: #edf3fb;
+  --color-line: #dce3ee;
+  --color-royal: #1749c6;
+  --color-sky: #1749c6;
+  --color-brand-red: #808080;
+  --color-danger: #c62828;
+  --color-mute: #667085;
+  --color-ink: #172033;
+  --color-ink-2: #334155;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* Paleta del tema oscuro: solo se redefinen las variables; las clases no cambian. */
+.dark {
+  color-scheme: dark;
+  --color-bg: #0b1220;
+  --color-surface: #131c2e;
+  --color-surface-2: #1b2740;
+  --color-line: #2a3956;
+  --color-royal: #3f6fe6;
+  --color-sky: #3f6fe6;
+  --color-brand-red: #9aa0a6;
+  --color-danger: #f2837f;
+  --color-mute: #9aa6bd;
+  --color-ink: #e8edf7;
+  --color-ink-2: #c5cee0;
+}
+
+/* El azul de marca se aclara cuando se usa como color de texto sobre fondo oscuro. */
+.dark .text-royal,
+.dark .text-sky {
+  color: #8aa9ff;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+select option {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}

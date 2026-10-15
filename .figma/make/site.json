@@ -1,0 +1,12 @@
+{
+  "title": "DOMESA – Rastreo y envíos",
+  "description": "Rastrea tus envíos, cotiza tarifas, solicita recolecciones y encuentra oficinas DOMESA en toda Venezuela.",
+  "language": "es",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
