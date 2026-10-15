@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Sora', 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --color-bg: #f7f9fd;
+  --color-surface: #ffffff;
+  --color-surface-2: #edf3fb;
+  --color-line: #dce3ee;
+  --color-royal: #1749c6;
+  --color-sky: #1749c6;
+  --color-brand-red: #808080;
+  --color-danger: #c62828;
+  --color-ok: #15803d;
+  --color-mute: #667085;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: #172033;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+select option {
+  background: var(--color-surface);
+  color: #172033;
+}
+
+input[type='date'] {
+  color-scheme: light;
+}
