@@ -275,8 +275,8 @@ export default function Menu() {
           <h2 className="font-display text-[19px] font-bold mb-4 text-center">Nuestros aliados</h2>
           <div className="grid grid-cols-2 gap-3">
             {ALIADOS.map(({ name, logo }) => (
-              <div key={name} className="h-20 rounded-2xl bg-white dark:bg-[#e9eef7] border border-line dark:border-transparent grid place-items-center px-4 py-3">
-                <img src={logo} alt={name} className="h-10 w-auto max-w-[128px] object-contain" />
+              <div key={name} className="h-20 rounded-2xl bg-white border border-line grid place-items-center p-3">
+                <img src={logo} alt={name} className="max-h-11 w-auto max-w-[120px] object-contain" />
               </div>
             ))}
           </div>

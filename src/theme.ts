@@ -4,7 +4,7 @@ export type Theme = "light" | "dark";
 
 const KEY = "domesa-theme";
 
-/** Tema guardado por el usuario con el botón; si no hay, siempre el claro. */
+/** Tema guardado por el usuario; si no hay, el del sistema operativo. */
 function read(): Theme {
   try {
     const saved = localStorage.getItem(KEY);
@@ -12,7 +12,7 @@ function read(): Theme {
   } catch {
     /* localStorage no disponible (modo privado, etc.) */
   }
-  return "light";
+  return typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 let current: Theme = read();

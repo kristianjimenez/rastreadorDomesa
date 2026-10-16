@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { Check, Package, PackageCheck, ScanSearch, Search, Truck, ArrowRight } from "lucide-react";
 import { ENABLE_QR_SCAN, SHIPMENTS, type Shipment } from "../data";
 import logo from "../assets/logo-domesa.png";
-import logoBlanco from "../assets/logo-domesa-blanco.png";
 import { Btn, Page, ThemeToggle, labelCls } from "../ui";
 
 function Timeline({ s }: { s: Shipment }) {
@@ -59,8 +58,7 @@ export default function Rastrear({ selected, select }: { selected: Shipment; sel
   return (
     <Page>
       <div className="flex items-center justify-between">
-        <img src={logo} alt="DOMESA" className="w-36 dark:hidden" />
-        <img src={logoBlanco} alt="DOMESA" className="w-36 hidden dark:block" />
+        <img src={logo} alt="DOMESA" className="w-36 dark:bg-white dark:rounded-xl dark:p-1.5" />
         <div className="flex items-center gap-2">
           <span className="rounded-full bg-royal/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-royal">Consulta pública</span>
           <ThemeToggle />
