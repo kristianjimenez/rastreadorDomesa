@@ -3,11 +3,9 @@
   <head>
     <!-- figma:head-start -->
     <script>
-      // Aplica el tema guardado (o el del sistema) antes de pintar, para evitar un destello blanco.
+      // Aplica el tema guardado (por defecto el claro) antes de pintar, para evitar un destello.
       try {
-        var t = localStorage.getItem("domesa-theme");
-        if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        if (t === "dark") document.documentElement.classList.add("dark");
+        if (localStorage.getItem("domesa-theme") === "dark") document.documentElement.classList.add("dark");
       } catch (e) {}
     </script>
     <meta charset="UTF-8" />

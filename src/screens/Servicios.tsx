@@ -40,7 +40,7 @@ function Internacionales({ go }: { go: Go }) {
     <>
       <Title>Envíos internacionales</Title>
       <Hero title={INTERNACIONALES.hero.title} sub={INTERNACIONALES.hero.sub} icon={Globe}>
-        <div className="mt-4 inline-flex rounded-xl bg-white p-2"><img src={dhl} alt="DHL" className="h-6 w-auto" /></div>
+        <img src={dhl} alt="DHL" className="mt-4 h-8 w-auto" />
       </Hero>
       <Block>
         <H2>Pasos para realizar un envío internacional</H2>
